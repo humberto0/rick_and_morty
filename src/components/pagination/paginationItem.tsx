@@ -1,10 +1,5 @@
 import * as S from "./styles";
-
-interface PaginationItemProps {
-  isCurrent?: boolean;
-  number: number;
-  onPageChange: (page: number) => void;
-}
+import { PaginationItemProps } from "./types";
 
 export function PaginationItem({
   number,

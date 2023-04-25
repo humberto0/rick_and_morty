@@ -5,10 +5,9 @@ export const Footer = () => {
   return (
     <S.Container>
       <S.Status>
-        <S.DataStatus>characters: {}</S.DataStatus>
-        <S.DataStatus>locations: {}</S.DataStatus>
-        <S.DataStatus>episodes: {}</S.DataStatus>
-        <S.DataStatus>Server Status: {}</S.DataStatus>
+        <S.DataStatus>characters: 826</S.DataStatus>
+        <S.DataStatus>locations: 126</S.DataStatus>
+        <S.DataStatus>episodes: 51</S.DataStatus>
       </S.Status>
       <S.SocialIcons>
         {socialMedia.map((social) => (

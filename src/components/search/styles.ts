@@ -8,4 +8,5 @@ export const Container = styled.div`
   width: 90%;
   margin-top: 1rem;
   gap: 1rem;
+  padding: 1rem;
 `;

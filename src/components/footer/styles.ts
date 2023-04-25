@@ -15,6 +15,7 @@ export const Container = styled.footer`
   padding: 4.5rem 0;
   min-height: calc(120px);
   width: 100%;
+  gap: 1rem;
 `;
 
 export const Status = styled.ul`
@@ -29,8 +30,9 @@ export const Status = styled.ul`
   margin: 0;
   padding: 0;
   width: 100%;
+  gap: 1rem;
   li {
-    margin: 0;
+    margin: 1rem;
   }
 `;
 

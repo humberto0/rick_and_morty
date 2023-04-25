@@ -1,16 +1,18 @@
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
-import { Input } from "./components/input";
-import { Select } from "./components/select";
+import { Provider as ReduxProvider } from "react-redux";
+import { store } from "./redux/store";
 import { Dashboard } from "./page/Dashboard";
+import { Search } from "./components/search";
 
 function App() {
   return (
-    <>
+    <ReduxProvider store={store}>
       <Header />
+      <Search />
       <Dashboard />
       <Footer />
-    </>
+    </ReduxProvider>
   );
 }
 

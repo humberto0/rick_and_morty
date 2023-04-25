@@ -1,8 +1,11 @@
 import { gql } from "@apollo/client";
 
 export const GET_DATA = gql`
-  query GetData($page: Int!, $nameFilter: String) {
-    characters(page: $page, filter: { name: $nameFilter }) {
+  query GetData($page: Int!, $nameFilter: String, $statusFilter: String) {
+    characters(
+      page: $page
+      filter: { name: $nameFilter, status: $statusFilter }
+    ) {
       info {
         count
       }
@@ -19,28 +22,6 @@ export const GET_DATA = gql`
         location {
           name
         }
-      }
-    }
-  }
-`;
-
-export const GET_FOOTER = gql`
-  query GetData($page: Int!, $nameFilter: String) {
-    characters {
-      info {
-        count
-      }
-    }
-
-    locations {
-      info {
-        count
-      }
-    }
-
-    episodes {
-      info {
-        count
       }
     }
   }

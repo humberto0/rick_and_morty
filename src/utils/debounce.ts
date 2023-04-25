@@ -3,14 +3,14 @@ let debounceTimerId: NodeJS.Timeout | undefined;
 export const debounceFunction = (
   value: string,
   time: number,
-): Promise<string | null> => {
+): Promise<string> => {
   return new Promise((resolve) => {
     clearTimeout(debounceTimerId);
     debounceTimerId = setTimeout(() => {
-      if (value.length >= 3) {
+      if (value.length >= 1) {
         resolve(value);
       } else {
-        resolve(null);
+        resolve("");
       }
     }, time);
   });

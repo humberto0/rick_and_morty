@@ -1,12 +1,6 @@
 import * as S from "./styles";
 import { PaginationItem } from "./paginationItem";
-
-interface PaginationProps {
-  totalCountOfRegisters: number;
-  registersPerPage?: number;
-  currentPage?: number;
-  onPageChange: (page: number) => void;
-}
+import { PaginationProps } from "./types";
 
 function generatePagesArray(from: number, to: number) {
   return [...new Array(to - from)]
