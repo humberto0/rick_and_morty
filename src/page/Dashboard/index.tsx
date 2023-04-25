@@ -1,15 +1,14 @@
-import { useQuery } from "@apollo/client";
-import { ListCard } from "../../components/listCard";
-import { GET_DATA } from "../../services/querys";
-import * as S from "./styles";
+import { useQuery } from '@apollo/client';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { ListCard } from '../../components/listCard';
+import { GET_DATA } from '../../services/querys';
+import * as S from './styles';
 
-import Loading from "../../assets/images/portal-rick-and-morty.gif";
-import Error from "../../assets/images/morty.gif";
-import { useSelector } from "react-redux";
-import { store } from "../../redux/store";
-import { setTotalPages } from "../../redux/slices";
-
-import { useEffect } from "react";
+import Loading from '../../assets/images/portal-rick-and-morty.gif';
+import Error from '../../assets/images/morty.gif';
+import { store } from '../../redux/store';
+import { setTotalPages } from '../../redux/slices';
 
 export const Dashboard = () => {
   const filter = useSelector(() => store.getState().filterReducer);
@@ -20,7 +19,7 @@ export const Dashboard = () => {
       nameFilter: filter.nameFilter,
       statusFilter: filter.statusFilter,
     },
-    fetchPolicy: "cache-first",
+    fetchPolicy: 'cache-first',
   });
 
   useEffect(() => {
@@ -49,7 +48,7 @@ export const Dashboard = () => {
         <S.ContentError>
           <S.ImageError src={Error} alt="Error" />
           <S.TextError>
-            Sorry, we couldn't find what you're looking for.
+            Sorry, we couldn´t find what you´re looking for.
           </S.TextError>
         </S.ContentError>
       ) : (

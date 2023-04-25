@@ -1,6 +1,6 @@
 export interface CardProps {
   name: string;
-  status: "Alive" | "Dead" | "unknown";
+  status: 'Alive' | 'Dead' | 'unknown';
   species: string;
   location: {
     name: string;

@@ -1,11 +1,11 @@
-import * as S from "./styles";
-import { PaginationItem } from "./paginationItem";
-import { PaginationProps } from "./types";
-import { store } from "../../redux/store";
-import { pageChange } from "../../redux/slices";
-import { useCallback } from "react";
-import { useSelector } from "react-redux";
-import { generatePagesArray, siblingsCount } from "./utils";
+import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import * as S from './styles';
+import { PaginationItem } from './paginationItem';
+import { PaginationProps } from './types';
+import { store } from '../../redux/store';
+import { pageChange } from '../../redux/slices';
+import { generatePagesArray, siblingsCount } from './utils';
 
 export function Pagination({ registersPerPage = 20 }: PaginationProps) {
   const totalCountOfRegisters = useSelector(
@@ -50,7 +50,7 @@ export function Pagination({ registersPerPage = 20 }: PaginationProps) {
         )}
 
         {previousPages.length > 0 &&
-          previousPages.map((page) => (
+          previousPages.map(page => (
             <PaginationItem
               onPageChange={onPageChange}
               key={page}
@@ -65,7 +65,7 @@ export function Pagination({ registersPerPage = 20 }: PaginationProps) {
         />
 
         {nextPages.length > 0 &&
-          nextPages.map((page) => (
+          nextPages.map(page => (
             <PaginationItem
               onPageChange={onPageChange}
               key={page}

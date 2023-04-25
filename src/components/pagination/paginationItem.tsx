@@ -1,5 +1,5 @@
-import * as S from "./styles";
-import { PaginationItemProps } from "./types";
+import * as S from './styles';
+import { PaginationItemProps } from './types';
 
 export function PaginationItem({
   number,

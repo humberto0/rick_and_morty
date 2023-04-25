@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.footer`
   display: flex;
@@ -85,7 +85,7 @@ export const SocialIconLink = styled.a`
   }
 
   ::before {
-    content: "";
+    content: '';
     width: 2.625rem;
     height: 2.625rem;
 

@@ -1,20 +1,20 @@
-import { Input } from "../input";
-import { Select } from "../select";
-import * as S from "./styles";
-import { store } from "../../redux/store";
-import { addFilterName, addFilterStatus } from "../../redux/slices";
-import { debounceFunction } from "../../utils/debounce";
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
+import { Input } from '../input';
+import { Select } from '../select';
+import * as S from './styles';
+import { store } from '../../redux/store';
+import { addFilterName, addFilterStatus } from '../../redux/slices';
+import { debounceFunction } from '../../utils/debounce';
 
 const options = [
-  { value: "", label: "All" },
-  { value: "alive", label: "Alive" },
-  { value: "dead", label: "Dead" },
-  { value: "unknown", label: "Unknown" },
+  { value: '', label: 'All' },
+  { value: 'alive', label: 'Alive' },
+  { value: 'dead', label: 'Dead' },
+  { value: 'unknown', label: 'Unknown' },
 ];
 
 export const Search = () => {
-  const [nameFilter, setNameFilter] = useState("");
+  const [nameFilter, setNameFilter] = useState('');
 
   const handleNameFilterChange = useCallback(async (value: string) => {
     setNameFilter(value);
@@ -28,11 +28,11 @@ export const Search = () => {
   return (
     <S.Container>
       <Input
-        name={"Character Name"}
-        placeholder={"Character Name"}
+        name="Character Name"
+        placeholder="Character Name"
         value={nameFilter}
-        onChange={(event) => handleNameFilterChange(event.target.value)}
-        clear={() => handleNameFilterChange("")}
+        onChange={event => handleNameFilterChange(event.target.value)}
+        clear={() => handleNameFilterChange('')}
       />
       <Select
         name="status"

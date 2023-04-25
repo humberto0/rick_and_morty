@@ -1,6 +1,6 @@
-import { FC } from "react";
-import * as S from "./styles";
-import { CardProps } from "../../types/cardTypes";
+import { FC, useCallback } from 'react';
+import * as S from './styles';
+import { CardProps } from '../../types/cardTypes';
 
 export const Card: FC<CardProps> = ({
   origin,
@@ -10,6 +10,16 @@ export const Card: FC<CardProps> = ({
   status,
   name,
 }) => {
+  const handleStatus = useCallback(() => {
+    if (status === 'Dead') {
+      return 'dead';
+    }
+    if (status === 'unknown') {
+      return 'unknown';
+    }
+    return '';
+  }, [status]);
+
   return (
     <S.Container>
       <S.ImageContent>
@@ -19,15 +29,7 @@ export const Card: FC<CardProps> = ({
         <S.Section>
           <S.Name>{name}</S.Name>
           <S.Description>
-            <S.Pointer
-              className={
-                status === "Dead"
-                  ? "dead"
-                  : status === "unknown"
-                  ? "unknown"
-                  : ""
-              }
-            />
+            <S.Pointer className={handleStatus()} />
             {status} - {species}
           </S.Description>
         </S.Section>

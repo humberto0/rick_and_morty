@@ -1,5 +1,5 @@
-import * as S from "./styles";
-import RickAndMorty from "../../assets/images/rickAndMorty.gif";
+import * as S from './styles';
+import RickAndMorty from '../../assets/images/rickAndMorty.gif';
 
 export const Header = () => {
   return (

@@ -1,6 +1,6 @@
-import * as S from "./styles";
-import { FC } from "react";
-import { InputProps } from "./types";
+import { FC } from 'react';
+import * as S from './styles';
+import { InputProps } from './types';
 
 export const Input: FC<InputProps> = ({
   name,

@@ -1,5 +1,5 @@
-import * as S from "./styles";
-import { socialMedia } from "./util";
+import * as S from './styles';
+import { socialMedia } from './util';
 
 export const Footer = () => {
   return (
@@ -10,7 +10,7 @@ export const Footer = () => {
         <S.DataStatus>episodes: 51</S.DataStatus>
       </S.Status>
       <S.SocialIcons>
-        {socialMedia.map((social) => (
+        {socialMedia.map(social => (
           <S.SocialIconLink href={social.url} key={social.id}>
             <S.SocialLogo src={social.image} alt={social.name} />
           </S.SocialIconLink>
@@ -19,7 +19,7 @@ export const Footer = () => {
       <S.CopyRight>
         © 2023 - By
         <S.CopyRightLink href="https://github.com/humberto0">
-          Humberto {"</>"}
+          Humberto {'</>'}
         </S.CopyRightLink>
       </S.CopyRight>
     </S.Container>

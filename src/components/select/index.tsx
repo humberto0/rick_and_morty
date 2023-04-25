@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { SelectProps } from "./types";
-import * as S from "./styles";
+import { FC } from 'react';
+import { SelectProps } from './types';
+import * as S from './styles';
 
 export const Select: FC<SelectProps> = ({
   name,
@@ -11,7 +11,7 @@ export const Select: FC<SelectProps> = ({
   return (
     <S.Container {...rest}>
       <S.Select name={name}>
-        {options.map((option) => (
+        {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
