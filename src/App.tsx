@@ -4,6 +4,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { store } from "./redux/store";
 import { Dashboard } from "./page/Dashboard";
 import { Search } from "./components/search";
+import { Pagination } from "./components/pagination";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Search />
       <Dashboard />
+      <Pagination />
       <Footer />
     </ReduxProvider>
   );

@@ -1,23 +1,23 @@
 import * as S from "./styles";
 import { PaginationItem } from "./paginationItem";
 import { PaginationProps } from "./types";
+import { store } from "../../redux/store";
+import { pageChange } from "../../redux/slices";
+import { useCallback } from "react";
+import { useSelector } from "react-redux";
+import { generatePagesArray, siblingsCount } from "./utils";
 
-function generatePagesArray(from: number, to: number) {
-  return [...new Array(to - from)]
-    .map((_, index) => {
-      return from + index + 1;
-    })
-    .filter((page) => page > 0);
-}
+export function Pagination({ registersPerPage = 20 }: PaginationProps) {
+  const totalCountOfRegisters = useSelector(
+    () => store.getState().filterReducer.totalPages,
+  );
 
-const siblingsCount = 1;
+  const currentPage = useSelector(() => store.getState().filterReducer.page);
 
-export function Pagination({
-  totalCountOfRegisters,
-  registersPerPage = 20,
-  currentPage = 1,
-  onPageChange,
-}: PaginationProps) {
+  const onPageChange = useCallback((page: number) => {
+    store.dispatch(pageChange(page));
+  }, []);
+
   const lastPage = Math.ceil(totalCountOfRegisters / registersPerPage);
 
   const previousPages =

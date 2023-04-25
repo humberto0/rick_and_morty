@@ -18,7 +18,7 @@ export const Search = () => {
 
   const handleNameFilterChange = useCallback(async (value: string) => {
     setNameFilter(value);
-    store.dispatch(addFilterName(await debounceFunction(value, 1000)));
+    store.dispatch(addFilterName(await debounceFunction(value, 500)));
   }, []);
 
   const handleChange = useCallback((value: string) => {

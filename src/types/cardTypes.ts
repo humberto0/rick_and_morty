@@ -14,7 +14,4 @@ export interface CardProps {
 
 export interface ListCardProps {
   cards: CardProps[];
-  currentPage?: number;
-  totalCountOfRegisters: number;
-  onPageChange: (page: number) => void;
 }

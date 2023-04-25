@@ -13,7 +13,7 @@ export const Container = styled.footer`
   color: #9e9e9e;
 
   padding: 4.5rem 0;
-  min-height: calc(120px);
+  min-height: 7.5rem;
   width: 100%;
   gap: 1rem;
 `;

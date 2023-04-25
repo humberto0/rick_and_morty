@@ -2,14 +2,8 @@ import { FC } from "react";
 import { ListCardProps } from "../../types/cardTypes";
 import * as S from "./styles";
 import { Card } from "../card";
-import { Pagination } from "../pagination";
 
-export const ListCard: FC<ListCardProps> = ({
-  cards,
-  onPageChange,
-  totalCountOfRegisters,
-  currentPage,
-}) => {
+export const ListCard: FC<ListCardProps> = ({ cards }) => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -19,11 +13,6 @@ export const ListCard: FC<ListCardProps> = ({
           ))}
         </S.Content>
       </S.Container>
-      <Pagination
-        totalCountOfRegisters={totalCountOfRegisters}
-        currentPage={currentPage}
-        onPageChange={onPageChange}
-      />
     </S.Wrapper>
   );
 };

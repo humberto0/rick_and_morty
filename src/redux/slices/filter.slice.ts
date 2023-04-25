@@ -5,6 +5,7 @@ const initialState: FilterProps = {
   nameFilter: "",
   statusFilter: "",
   page: 1,
+  totalPages: 1,
 };
 
 const filterSlice = createSlice({
@@ -17,6 +18,7 @@ const filterSlice = createSlice({
     ) => {
       if (state.nameFilter === action.payload) return;
       state.nameFilter = action.payload;
+      state.page = 1;
     },
 
     addFilterStatus: (
@@ -27,12 +29,20 @@ const filterSlice = createSlice({
       state.statusFilter = action.payload;
     },
 
-    addPage: (state, action: PayloadAction<FilterProps["page"]>) => {
+    pageChange: (state, action: PayloadAction<FilterProps["page"]>) => {
       state.page = action.payload;
+    },
+
+    setTotalPages: (
+      state,
+      action: PayloadAction<FilterProps["totalPages"]>,
+    ) => {
+      state.totalPages = action.payload;
     },
   },
 });
 
-export const { addFilterName, addFilterStatus } = filterSlice.actions;
+export const { addFilterName, addFilterStatus, pageChange, setTotalPages } =
+  filterSlice.actions;
 
 export default filterSlice.reducer;

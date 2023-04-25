@@ -26,13 +26,8 @@ export const Select = styled.select`
 
   option {
     background: rgb(32, 35, 41);
-    margin-bottom: -2rem !important;
     color: #c3c3c3;
-    border: none !important;
     font-size: 1rem;
-    border-bottom-left-radius: 4px !important;
-    border-bottom-right-radius: 4px !important;
-    padding: 10px;
     :hover {
       background-color: #ccc;
       color: #fff;
