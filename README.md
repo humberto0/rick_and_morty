@@ -9,9 +9,12 @@ Esta é uma aplicação que utiliza a tecnologia GraphQL e o gerenciador de esta
 
 Para instalar as dependências do projeto, é necessário ter o Node.js instalado em sua máquina. Em seguida, execute o seguinte comando no terminal:
 
+* Caso você use gerenciador yarn :
+
 ```bash
 yarn
 ```
+* Caso você use gerenciador npm :
 
 ```bash
 npm install
@@ -21,9 +24,12 @@ npm install
 
 Para executar a aplicação em modo de desenvolvimento, utilize o seguinte comando:
 
+* Caso você use gerenciador yarn :
+
 ```bash
 yarn start
 ```
+* Caso você use gerenciador npm :
 
 ```bash
 npm start
