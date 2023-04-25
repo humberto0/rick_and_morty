@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# Aplicação de visualização de personagens Rick and Morty
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta é uma aplicação que utiliza a tecnologia GraphQL e o gerenciador de estado Redux para mostrar informações sobre os personagens do desenho Rick and Morty. Nela, é possível verificar o status do personagem, nome e em qual episódio ele apareceu.
 
-## Available Scripts
+![Captura de tela de 2023-04-25 11-05-04](https://user-images.githubusercontent.com/15384670/234310395-55957793-9530-406c-b4db-6a025c1e6b7e.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## Instalação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para instalar as dependências do projeto, é necessário ter o Node.js instalado em sua máquina. Em seguida, execute o seguinte comando no terminal:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+yarn
+npm install
+```
 
-### `npm test`
+## Uso
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para executar a aplicação em modo de desenvolvimento, utilize o seguinte comando:
 
-### `npm run build`
+```bash
+yarn start
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Isso iniciará a aplicação em `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Abaixo estão as tecnologias utilizadas neste projeto:
 
-### `npm run eject`
+* GraphQL
+* Redux
+* React
+* Styled Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Estrutura de arquivos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A estrutura de arquivos do projeto está organizada da seguinte maneira:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+rick_and_morty/
+  README.md
+  node_modules/
+  package.json
+  public/
+    index.html
+    favicon.ico
+  src/
+    App.tsx
+    index.tsx
+    components/
+      Character/
+        Character.tsx
+        Character.test.tsx
+        index.ts
+      CharacterList/
+        CharacterList.tsx
+        CharacterList.test.tsx
+        index.ts
+      StatusIcon/
+        StatusIcon.tsx
+        StatusIcon.test.tsx
+        index.ts
+    graphql/
+      queries.ts
+    reducers/
+      index.ts
+    store/
+      configureStore.ts
+    styles/
+      GlobalStyle.ts
+      theme.ts
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+## Licença
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
