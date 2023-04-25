@@ -5,6 +5,7 @@ Esta é uma aplicação que utiliza a tecnologia GraphQL e o gerenciador de esta
 ![Captura de tela de 2023-04-25 11-05-04](https://user-images.githubusercontent.com/15384670/234310395-55957793-9530-406c-b4db-6a025c1e6b7e.png)
 
 
+
 ## Instalação
 
 Para instalar as dependências do projeto, é necessário ter o Node.js instalado em sua máquina. Em seguida, execute o seguinte comando no terminal:
