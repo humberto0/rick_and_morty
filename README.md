@@ -11,6 +11,9 @@ Para instalar as dependências do projeto, é necessário ter o Node.js instalad
 
 ```bash
 yarn
+```
+
+```bash
 npm install
 ```
 
@@ -20,6 +23,9 @@ Para executar a aplicação em modo de desenvolvimento, utilize o seguinte coman
 
 ```bash
 yarn start
+```
+
+```bash
 npm start
 ```
 
